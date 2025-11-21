@@ -1,44 +1,41 @@
-* {
+/* Body normale, NON flex */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center; /* Centra l’H1 */
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
+/* Titolo separato */
 h1 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.products-grid {
+/* CONTAINER delle card */
+.container {
+  width: 80%; /* NON tutto schermo */
+  max-width: 1200px; /* limite massimo */
+  margin: 0 auto; /* CENTRA il container perfettamente */
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr); /* 3 card per riga */
+  gap: 20px;
 }
 
+/* CARD */
 .product-card {
   background: white;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
@@ -48,28 +45,21 @@ h1 {
 }
 
 .product-info {
-  padding: 20px;
+  padding: 15px;
 }
 
 .product-name {
+  margin: 0;
   font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8px;
 }
 
 .product-category {
-  display: inline-block;
-  padding: 4px 12px;
-  background-color: #e3f2fd;
-  color: #1976d2;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 12px;
+  color: #666;
+  font-size: 14px;
 }
 
 .product-price {
-  font-size: 24px;
+  margin-top: 10px;
+  font-size: 20px;
   font-weight: bold;
-  color: #2e7d32;
 }

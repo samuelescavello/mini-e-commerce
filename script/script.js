@@ -251,6 +251,7 @@ catalogo.forEach((prodotto) => {
                     <h3 class="product-name">${prodotto.name}</h3>
                     <span class="product-category">${prodotto.categoria}</span>
                     <p class="product-price">€${prodotto.prezzo}</p>
+                    <button data-id="${prodotto.id}">add to cart</button>
                 </div>
     `;
   container.appendChild(card);
